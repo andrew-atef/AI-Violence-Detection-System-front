@@ -1,0 +1,667 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 225,
+      "max": [
+        1.0,
+        1.0,
+        1.1805546283721924
+      ],
+      "min": [
+        -1.0,
+        -2.6939024925231934,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 2700,
+      "componentType": 5126,
+      "count": 225,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 225,
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 225,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 486,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 5400,
+      "componentType": 5126,
+      "count": 136,
+      "max": [
+        1.0,
+        1.0,
+        0.36594653129577637
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 7032,
+      "componentType": 5126,
+      "count": 136,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 3600,
+      "componentType": 5126,
+      "count": 136,
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1800,
+      "componentType": 5126,
+      "count": 136,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 1944,
+      "componentType": 5125,
+      "count": 372,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 8664,
+      "componentType": 5126,
+      "count": 353,
+      "max": [
+        8.737685203552246,
+        2.81315016746521,
+        3.3053677082061768
+      ],
+      "min": [
+        -3.0392556190490723,
+        -2.8131725788116455,
+        -1.0089726448059082
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 12900,
+      "componentType": 5126,
+      "count": 353,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 5776,
+      "componentType": 5126,
+      "count": 353,
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 2888,
+      "componentType": 5126,
+      "count": 353,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 3432,
+      "componentType": 5125,
+      "count": 996,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 17136,
+      "componentType": 5126,
+      "count": 120,
+      "max": [
+        0.48844772577285767,
+        0.9525153636932373,
+        1.4646450281143188
+      ],
+      "min": [
+        -0.2985685467720032,
+        -0.9783049821853638,
+        -2.6708555221557617
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 18576,
+      "componentType": 5126,
+      "count": 120,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 11424,
+      "componentType": 5126,
+      "count": 120,
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 5712,
+      "componentType": 5126,
+      "count": 120,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 7416,
+      "componentType": 5125,
+      "count": 300,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 20016,
+      "componentType": 5126,
+      "count": 65,
+      "max": [
+        1.0,
+        1.0,
+        -0.5555616617202759
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 20796,
+      "componentType": 5126,
+      "count": 65,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 13344,
+      "componentType": 5126,
+      "count": 65,
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 6672,
+      "componentType": 5126,
+      "count": 65,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 8616,
+      "componentType": 5125,
+      "count": 186,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "generator": "fab-model-conversion",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 9360,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 7192,
+      "byteOffset": 9360,
+      "byteStride": 8,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 21576,
+      "byteOffset": 16552,
+      "byteStride": 12,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 14384,
+      "byteOffset": 38128,
+      "byteStride": 16,
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 52512,
+      "uri": "scene.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/cctv_bracket_normal.png"
+    },
+    {
+      "uri": "textures/cctv_base.001_normal.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "cctv_bracket",
+      "normalTexture": {
+        "index": 0
+      },
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.8,
+          0.8,
+          0.8,
+          1.0
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.8211145618000169
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "cctv_bracket_holder",
+      "normalTexture": {
+        "index": 0
+      },
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.8,
+          0.8,
+          0.8,
+          1.0
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.8211145618000169
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "cctv_base.001",
+      "normalTexture": {
+        "index": 1
+      },
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.8,
+          0.8,
+          0.8,
+          1.0
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.8211145618000169
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "cctv_cover",
+      "normalTexture": {
+        "index": 0
+      },
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.8,
+          0.8,
+          0.8,
+          1.0
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.8211145618000169
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "cctv_led",
+      "normalTexture": {
+        "index": 0
+      },
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.8,
+          0.8,
+          0.8,
+          1.0
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.8211145618000169
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "cctv_bracket_cctv_bracket_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "cctv_bracket_holder_cctv_bracket_holder_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 6,
+            "POSITION": 5,
+            "TANGENT": 7,
+            "TEXCOORD_0": 8
+          },
+          "indices": 9,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "cctv_base_cctv_base.001_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 11,
+            "POSITION": 10,
+            "TANGENT": 12,
+            "TEXCOORD_0": 13
+          },
+          "indices": 14,
+          "material": 2,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "cctv_cover_cctv_cover_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 16,
+            "POSITION": 15,
+            "TANGENT": 17,
+            "TEXCOORD_0": 18
+          },
+          "indices": 19,
+          "material": 3,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "cctv_led_cctv_led_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 21,
+            "POSITION": 20,
+            "TANGENT": 22,
+            "TEXCOORD_0": 23
+          },
+          "indices": 24,
+          "material": 4,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.009999999776482582,
+        0.0,
+        0.0,
+        -0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "cctv_camera.fbx"
+    },
+    {
+      "children": [
+        3,
+        5,
+        7,
+        9,
+        11
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4
+      ],
+      "matrix": [
+        8.28149700164795,
+        0.0,
+        0.0,
+        0.0,
+        -0.0,
+        -2.226367322797298e-06,
+        -13.665345191955385,
+        0.0,
+        0.0,
+        13.665345191955385,
+        -2.226367322797298e-06,
+        0.0,
+        -282.5243835449219,
+        460.9062805175781,
+        -317.048828125,
+        1.0
+      ],
+      "name": "cctv_bracket"
+    },
+    {
+      "mesh": 0,
+      "name": "cctv_bracket_cctv_bracket_0"
+    },
+    {
+      "children": [
+        6
+      ],
+      "matrix": [
+        1.8567177057266235,
+        0.0,
+        0.0,
+        0.0,
+        -0.0,
+        -3.0249771005582404e-07,
+        -1.856717705726599,
+        0.0,
+        0.0,
+        1.856717705726599,
+        -3.0249771005582404e-07,
+        0.0,
+        -282.2469482421875,
+        478.5646057128906,
+        -282.5824279785156,
+        1.0
+      ],
+      "name": "cctv_bracket_holder"
+    },
+    {
+      "mesh": 1,
+      "name": "cctv_bracket_holder_cctv_bracket_holder_0"
+    },
+    {
+      "children": [
+        8
+      ],
+      "matrix": [
+        3.610050678253174,
+        0.0,
+        0.0,
+        0.0,
+        -0.0,
+        -5.881519091399489e-07,
+        -3.6100506782531263,
+        0.0,
+        0.0,
+        3.6100506782531263,
+        -5.881519091399489e-07,
+        0.0,
+        -282.16619873046875,
+        482.7097473144531,
+        -282.4826965332031,
+        1.0
+      ],
+      "name": "cctv_base"
+    },
+    {
+      "mesh": 2,
+      "name": "cctv_base_cctv_base.001_0"
+    },
+    {
+      "children": [
+        10
+      ],
+      "matrix": [
+        -5.087717900183819e-07,
+        -11.639341354370107,
+        -1.2922264763093457e-15,
+        0.0,
+        -5.087717906644952e-07,
+        2.3260076573568223e-14,
+        -11.639341354370107,
+        0.0,
+        11.639341354370096,
+        -5.087717906644952e-07,
+        -5.087717900183819e-07,
+        0.0,
+        -264.287353515625,
+        493.8180847167969,
+        -282.4136962890625,
+        1.0
+      ],
+      "name": "cctv_cover"
+    },
+    {
+      "mesh": 3,
+      "name": "cctv_cover_cctv_cover_0"
+    },
+    {
+      "children": [
+        12
+      ],
+      "matrix": [
+        -3.436653783076472e-08,
+        -0.7862147092819207,
+        -8.728736725437629e-17,
+        0.0,
+        -3.4366537874408404e-08,
+        1.5711726105787732e-15,
+        -0.7862147092819207,
+        0.0,
+        0.7862147092819199,
+        -3.4366537874408404e-08,
+        -3.436653783076472e-08,
+        0.0,
+        -249.8506317138672,
+        480.5289611816406,
+        -276.5577392578125,
+        1.0
+      ],
+      "name": "cctv_led"
+    },
+    {
+      "mesh": 4,
+      "name": "cctv_led_cctv_led_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    }
+  ]
+}

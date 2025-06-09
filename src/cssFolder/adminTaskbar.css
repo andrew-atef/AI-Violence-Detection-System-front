@@ -1,0 +1,51 @@
+.admin-taskbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 15px 30px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+}
+
+.taskbar-logo {
+  width: 60px;
+  height: 60px;
+  transform: scaleX(-1);
+  margin-right: 15px;
+}
+
+.dashboard-title {
+  font-size: 20px;
+  margin: 0;
+  font-weight: bold;
+  color: #333;
+}
+
+.admin-name {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.notification-icon {
+  font-size: 24px;
+  cursor: pointer;
+  position: relative;
+}
+
+.notification-badge {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  padding: 3px 6px;
+  border-radius: 50%;
+}

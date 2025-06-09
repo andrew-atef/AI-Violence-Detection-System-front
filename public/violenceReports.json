@@ -1,0 +1,104 @@
+[
+  {
+    "id": 1,
+    "username": "John Doe",
+    "note": "A person was seen fighting.",
+    "camera_no": 1,
+    "timing": "2025-04-07T10:30:00",
+    "frame": "https://example.com/violence1.jpg",
+    "procedure": "Security alerted.",
+    "isRead": false
+  },
+  {
+    "id_violence": 2,
+    "username": "Jane Smith",
+    "note": "Two people were seen arguing.",
+    "camera_no": 2,
+    "timing": "2025-04-07T11:00:00",
+    "frame": "https://example.com/violence2.jpg",
+    "procedure": "Security intervened.",
+    "isRead": false
+  },
+  {
+    "id_violence": 3,
+    "username": "Alice Brown",
+    "note": "A fight broke out in the cafeteria between employees.",
+    "camera_no": 3,
+    "timing": "2025-04-07T12:15:00",
+    "frame": "https://example.com/violence3.jpg",
+    "procedure": "Security escorted the individuals out.",
+    "isRead": true
+  },
+  {
+    "id_violence": 4,
+    "username": "Bob White",
+    "note": "A suspicious argument occurred near the back entrance.",
+    "camera_no": 4,
+    "timing": "2025-04-07T14:30:00",
+    "frame": "https://example.com/violence4.jpg",
+    "procedure": "Surveillance team reviewed footage, no further action needed.",
+    "isRead": true
+  },
+  {
+    "id_violence": 5,
+    "username": "Chris Green",
+    "note": "Two individuals were seen pushing each other in the hallway.",
+    "camera_no": 1,
+    "timing": "2025-04-07T15:00:00",
+    "frame": "https://example.com/violence5.jpg",
+    "procedure": "Incident documented and reported to HR.",
+    "isRead": false
+  },
+  {
+    "id_violence": 6,
+    "username": "Emily Black",
+    "note": "A physical altercation took place near the vending machines.",
+    "camera_no": 2,
+    "timing": "2025-04-07T16:20:00",
+    "frame": "https://example.com/violence6.jpg",
+    "procedure": "Security responded immediately, individuals were separated.",
+    "isRead": false
+  },
+  {
+    "id_violence": 7,
+    "username": "Daniel Blue",
+    "note": "An employee was seen pushing another employee in the break room.",
+    "camera_no": 3,
+    "timing": "2025-04-07T17:10:00",
+    "frame": "https://example.com/violence7.jpg",
+    "procedure": "HR investigated, verbal warning issued.",
+    "isRead": true
+  },
+  {
+    "id_violence": 8,
+    "username": "Grace Yellow",
+    "note": "A person was caught on camera fighting in the loading dock.",
+    "camera_no": 4,
+    "timing": "2025-04-07T18:00:00",
+    "frame": "https://example.com/violence8.jpg",
+    "procedure": "Security called for backup and reported to management.",
+    "isRead": false
+  },
+  {
+    "id_violence": 9,
+    "username": "Helen Red",
+    "note": "A verbal confrontation turned physical near the office entrance.",
+    "camera_no": 1,
+    "timing": "2025-04-07T19:00:00",
+    "frame": "https://example.com/violence9.jpg",
+    "procedure": "Security intervened and filed a report.",
+    "isRead": false
+  },
+  {
+   
+      "id_violence": 10,
+      "username": "Frank Gray",
+      "note": "A fight broke out in the main hallway.",
+      "camera_no": 2,
+      "timing": "2025-04-07T20:30:00",
+      "frame": "https://example.com/violence10.jpg",
+      "procedure": "Incident reported to authorities, investigation ongoing.",
+      "isRead": false
+    }
+  
+]

@@ -1,0 +1,478 @@
+/* Add at the top of the file */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+ 
+  width: 100vw;
+  height: 100vh;
+}
+
+.landing-page {
+  min-height: 100vh;
+  max-width: 100vw;
+  color: white;
+  padding: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Update main content container */
+.main-content {
+  width: 100%;
+  max-width: 100vw;
+  position: relative;
+  z-index: 1;
+ 
+}
+
+/* Update features grid */
+.features-grid {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  
+}
+
+.header {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center horizontally */
+  gap: 20px;
+  width: 100%; /* Take full width */
+}
+
+.logo {
+  width: 120px;
+@keyframes tiltAnimation {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(25deg); }
+  75% { transform: rotate(-25deg); }
+  100% { transform: rotate(0deg); }
+}  height: 120px;
+  animation: tiltAnimation 4s ease-in-out infinite;
+}
+
+@keyframes tiltAnimation {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(10deg); }
+  75% { transform: rotate(-10deg); }
+  100% { transform: rotate(0deg); }
+}
+
+
+
+/* Add style for the heading */
+.logo-container h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 0; /* Remove default margins */
+}
+
+/* Adjust main content to not overlap */
+.main-content {
+  padding-top: 20px; /* Reduced top padding */
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes rotateY {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  transform-style: preserve-3d;
+  backface-visibility: visible;
+}
+
+/* Add new camera animations */
+.camera5 {
+  top: 15%;
+  left: 45%;
+  animation: float5 25s infinite linear;
+}
+
+.camera6 {
+  bottom: 20%;
+  right: 40%;
+  animation: float6 23s infinite linear;
+}
+
+.camera7 {
+  top: 70%;
+  left: 35%;
+  animation: float7 19s infinite linear;
+}
+
+.camera8 {
+  top: 30%;
+  right: 45%;
+  animation: float8 21s infinite linear;
+}
+
+.camera9 {
+  bottom: 40%;
+  left: 50%;
+  animation: float9 24s infinite linear;
+}
+
+.camera10 {
+  top: 50%;
+  right: 30%;
+  animation: float10 17s infinite linear;
+}
+
+@keyframes float5 {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(30px, 20px) rotate(180deg); }
+  100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+@keyframes float6 {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(-20px, 30px) rotate(-180deg); }
+  100% { transform: translate(0, 0) rotate(-360deg); }
+}
+
+@keyframes float7 {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(25px, -20px) rotate(180deg); }
+  100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+@keyframes float8 {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(-30px, -25px) rotate(-180deg); }
+  100% { transform: translate(0, 0) rotate(-360deg); }
+}
+
+@keyframes float9 {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(-20px, 30px) rotate(-180deg); }
+  100% { transform: translate(0, 0) rotate(-360deg); }
+}
+
+@keyframes float10 {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(-20px, 30px) rotate(-180deg); }
+  100% { transform: translate(0, 0) rotate(-360deg); }
+}
+
+/* Update auth buttons styles */
+.auth-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.signin-btn, .register-btn {
+  padding: 12px 40px;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.signin-btn {
+  background-color: white;
+  color: #8B5CF6;
+  border: none;
+}
+
+.register-btn {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.signin-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+.register-btn:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Adjust main content spacing */
+.main-content {
+  padding-top: 40px;
+}
+
+.main-content h2 {
+  margin-bottom: 15px;
+}
+
+.main-content > p {
+  margin-bottom: 30px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Background Cameras Animation */
+.background-cameras {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.floating-camera {
+  position: absolute;
+  opacity: 0.15;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 70px;
+  filter: blur(0.5px);
+  transform-origin: center center;
+}
+
+@keyframes float1 {
+  0% { transform: translate(0, 0) rotate(-25deg) scale(1); }
+  50% { transform: translate(100px, 20px) rotate(-35deg) scale(1.1); }
+  100% { transform: translate(0, 0) rotate(-25deg) scale(1); }
+}
+
+@keyframes float2 {
+  0% { transform: translate(0, 0) rotate(25deg) scale(1); }
+  50% { transform: translate(-120px, 30px) rotate(35deg) scale(1.1); }
+  100% { transform: translate(0, 0) rotate(25deg) scale(1); }
+}
+
+/* تطبيق نفس النمط على باقي الحركات */
+.camera1 {
+  top: 20%;
+  left: 10%;
+  animation: float1 20s infinite ease-in-out;
+}
+
+.camera2 {
+  top: 60%;
+  right: 15%;
+  animation: float2 25s infinite ease-in-out;
+}
+
+.camera3 {
+  bottom: 30%;
+  left: 20%;
+  animation: float3 22s infinite ease-in-out;
+}
+
+.camera4 {
+  top: 40%;
+  right: 25%;
+  animation: float4 28s infinite ease-in-out;
+}
+
+.camera5 {
+  bottom: 50%;
+  left: 30%;
+  animation: float5 23s infinite ease-in-out;
+}
+
+.camera6 {
+  top: 70%;
+  right: 35%;
+  animation: float6 26s infinite ease-in-out;
+}
+
+@keyframes float1 {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(100px, 20px) rotate(180deg); }
+  100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+@keyframes float2 {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(-120px, 30px) rotate(-180deg); }
+  100% { transform: translate(0, 0) rotate(-360deg); }
+}
+
+@keyframes float3 {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(80px, -20px) rotate(180deg); }
+  100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+@keyframes float4 {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(-90px, -25px) rotate(-180deg); }
+  100% { transform: translate(0, 0) rotate(-360deg); }
+}
+
+@keyframes float5 {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(110px, 15px) rotate(180deg); }
+  100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+@keyframes float6 {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(-100px, -30px) rotate(-180deg); }
+  100% { transform: translate(0, 0) rotate(-360deg); }
+}
+
+/* Feature Cards Animation */
+.feature-card {
+  animation: fadeInUp 0.6s ease-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.feature-card:hover h3 {
+  color: #867202; /* نفس لون اللوجو عند الhover */
+  transition: color 0.3s ease;
+}
+
+.feature-card:nth-child(1) { animation-delay: 0.2s; }
+.feature-card:nth-child(2) { animation-delay: 0.4s; }
+.feature-card:nth-child(3) { animation-delay: 0.6s; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Icon Animation */
+.icon-container {
+  width: 80px;
+  height: 80px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-icon {
+  font-size: 32px;
+  color: rgb(75 57 118); /* نفس لون الخلفية */
+  transition: color 0.3s ease;
+}
+
+.feature-card:hover .icon-container {
+  transform: scale(1.1) rotate(10deg);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.feature-card:hover .feature-icon {
+  color: rgb(75 57 118);
+}
+
+.feature-card:hover .icon-container {
+  transform: scale(1.1) rotate(10deg);
+}
+
+.feature-icon {
+  transition: color 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+  color: #867202;
+}
+
+/* Make sure main content is above background */
+.main-content {
+  position: relative;
+  z-index: 1;
+}
+
+.header {
+  position: relative;
+  z-index: 1;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  text-align: center; /* Add this to center the headings */
+}
+
+.feature-card p {
+  color: rgba(255, 255, 255, 0.3);
+  line-height: 1.6;
+  text-align: center; /* Add this to center the paragraphs too for consistency */
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(75, 57, 118, 0.3);
+}
+
+/* Adjust existing elements to be visible over video */
+.navbar,
+.header,
+.main-content {
+    position: relative;
+    z-index: 2;
+}

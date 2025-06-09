@@ -1,0 +1,168 @@
+.overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(75 57 118);
+}
+
+.login-container {
+   
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition: background-color 2s ease, box-shadow 2s ease;
+}
+.login-container:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 30px rgba(256, 256, 256, 0.4);;
+}
+.profile-icon {
+    font-size: 80px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.title {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.form-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group input {
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 8px;
+   
+    outline: none;
+    
+    color: white;
+    width: 100%;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.form-group input::placeholder {
+    color: white;
+    opacity: 0.7; /* Slightly transparent for better visibility */
+}
+
+
+
+.register-text {
+    margin-top: 20px;
+    color: white;
+    font-size: 14px;
+    ;
+}
+
+.register-link {
+    color: #4285f4;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.register-link:hover {
+    color: #2b5797;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.btn {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.signin2-btn {
+    background-color: #2c59a2;
+    color: white;
+}
+
+.signin2-btn:hover {
+    background-color: #2b5797;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(66, 133, 244, 0.3);
+}
+
+.signin2-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(66, 133, 244, 0.3);
+}
+
+.reset-btn {
+    background-color: #a82835;
+    color: white;
+}
+
+.reset-btn:hover {
+    background-color: #c82333;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(220, 53, 69, 0.3);
+}
+
+.reset-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(220, 53, 69, 0.3);
+}
+
+.error-message {
+    background-color: rgba(220, 53, 69, 0.2);
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+    border: 1px solid rgba(220, 53, 69, 0.3);
+}
+
+.login-redirect {
+    text-align: center;
+    margin-top: 1rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.login-link {
+    color: #1976d2;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 0.3rem;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}
+
+.MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+    border-color: white !important;
+}
+
+.MuiOutlinedInput-input::placeholder {
+    color: white !important;
+    opacity: 0.7 !important;
+}

@@ -1,0 +1,29 @@
+.background-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.background-color {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(75 57 118);
+}
+
+.background-cameras {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.floating-camera {
+    position: fixed;
+    color: rgba(255, 255, 255, 0.1);
+    font-size: 40px;
+}
