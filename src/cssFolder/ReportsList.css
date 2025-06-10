@@ -1,36 +1,68 @@
 .reports-container {
     padding: 20px;
+    margin-left: 100px;
+    min-height: 100vh; /* Add this line */
+    background-color: rgba(255, 255, 255, 0.9); /* Optional: slightly stronger background */
+    transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+   
   }
-  
-  .reports-container h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
+
+  body:not(:has(.dashboard-container1:hover)) .reports-container {
+    margin-left: 0;
   }
-  
-  .sort-toggle {
-    margin-bottom: 15px;
-    font-size: 14px;
+
+.reports-container:hover {
+    margin-left: 0;
   }
-  
+ 
   .reports-table-wrapper {
     overflow-y: auto;
-    max-height: 600px;
     border: 1px solid #ccc;
     border-radius: 8px;
+    display: flex;
+    flex-direction: column;
   }
   
   .reports-table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    overflow: hidden;
+    flex: 1; /* Add this to make table fill available space */
   }
   
   .reports-table th,
   .reports-table td {
-    padding: 8px 10px;
+    padding: 12px;
+    text-align: left;
     border-bottom: 1px solid #ddd;
-    text-align: center;
-    line-height: 1.4;
+  }
+  
+  .reports-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .reports-table tr:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .action-btn {
+    padding: 6px 12px;
+    margin-right: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .action-btn.accept {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .action-btn.delete {
+    background-color: #f44336;
+    color: white;
   }
   
   .reports-table th {
@@ -63,5 +95,32 @@
   
   .reports-table button:hover {
     background-color: #45a049;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    margin-top: 70vh;
+    gap: 5px;
+  }
+  
+  .pagination button {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s;
+  }
+  
+  .pagination button:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .pagination button.active {
+    background-color: #4CAF50;
+    color: white;
+    border-color: #4CAF50;
   }
   

@@ -227,10 +227,12 @@ body {
 
 .main-content h2 {
   margin-bottom: 15px;
+  text-align: center;
 }
 
 .main-content > p {
   margin-bottom: 30px;
+  text-align: center;
 }
 
 .features-grid {

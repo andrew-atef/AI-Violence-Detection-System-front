@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Footer from '../components/Footer';
 import AdminTaskbar from '../components/AdminTaskbar';
 import ReportsList from '../components/ReportsList';
 import '../cssFolder/AdminDashboard.css';
 import Spinner from '../components/Spinner';
+import AnimatedBackground from '../components/AnimatedBackground';
+import CamerasView1 from '../components/CamerasView1';
+import UsersTable from '../components/UsersTable';
 
 
 function AdminDashboard() {
@@ -15,17 +17,22 @@ function AdminDashboard() {
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
+  const [activeComponent, setActiveComponent] = useState('reports');
+
   useEffect(() => {
     const token = localStorage.getItem('token');
     const role = localStorage.getItem('role');
-    if (!token || role !== 'admin') {
+    console.log(token);
+    console.log(role);
+    // if (!token || role !== 'admin') {
+    if ( role !== 'admin') {
       navigate('/login');
       return;
     }
 
     setLoading(true);
 
-    fetch("/api/violence-notifications", {
+    fetch("https://4908-197-37-156-248.ngrok-free.app/api/violence-notifications", {
       headers: {
         'Authorization': `Bearer ${token}`,
         'Accept': 'application/json',
@@ -98,7 +105,7 @@ function AdminDashboard() {
     // NOTE: This assumes a PATCH endpoint exists at /api/violence-notifications/{id}
     //       and accepts { "isRead": true } or similar. Confirm with backend.
     // console.warn(`Attempting to PATCH report ${id} as read. Ensure backend endpoint exists and supports this.`);
-    fetch(`/api/violence-notifications/${id}`, { // Use the correct ID and base URL
+    fetch(`http://141.147.83.47:8083/api/violence-notifications/${id}`, { // Use the correct ID and base URL
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -122,8 +129,6 @@ function AdminDashboard() {
       })
       .catch((err) => {
         console.error("Failed to update report on server:", err);
-        // Error state is already set in the .then block if !res.ok
-        // If the fetch itself fails (network error), the state is already reverted above.
       });
   };
   
@@ -140,29 +145,36 @@ if (loading) {
 
   
 
-  return  (
-      <>
-      <AdminTaskbar unreadCount={unreadCount} />
-      <button className="logout-button" onClick={() => {
-        localStorage.removeItem('token');
-        localStorage.removeItem('username');
-        navigate('/');
-      }}>
-        Logout
-      </button>
-      {console.log("Rendering ReportsList with reports:", reports)}
-      <ReportsList
-        reports={reports}
-        markAsRead={markAsRead}
-        recentFirst={recentFirst}
-        setRecentFirst={setRecentFirst}
-      />
-      <Footer />
-    </>
-  
+  const renderActiveComponent = () => {
+    switch(activeComponent) {
+      case 'reports':
+        return <ReportsList 
+                 reports={reports}
+                 markAsRead={markAsRead}
+                 recentFirst={recentFirst}
+                 setRecentFirst={setRecentFirst}
+               />;
+      case 'users':
+        return <UsersTable />;
+      case 'cameras':
+        return <CamerasView1 />; // You'll need to create this
+      default:
+        return <ReportsList  />;
+    }
+  };
 
-    
+  return (
+    <>
+      <AnimatedBackground />
+      <div className="dashboard-container1">
+        <AdminTaskbar 
+          unreadCount={unreadCount} 
+          onItemSelect={setActiveComponent}
+        />
+        {renderActiveComponent()}
+      </div>
+    </>
   );
-  
 }
+
 export default AdminDashboard;

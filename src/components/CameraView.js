@@ -12,7 +12,7 @@ const CameraView = ({ cameraNumber, viewMode }) => {
   const streamInstanceRef = useRef(null); // Ref to hold the stream instance for cleanup
 
   useEffect(() => {
-    const ENDPOINT_URL = '/api/send-video';
+    const ENDPOINT_URL = 'http://141.147.83.47:8083/api/send-video';
 
     const setupWebcam = async () => {
         console.log(`Camera ${cameraNumber}: Starting setup...`);

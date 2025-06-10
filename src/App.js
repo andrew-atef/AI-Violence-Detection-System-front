@@ -7,12 +7,10 @@ import ReportDetails from './Pages/ReportDetails.js';
 import Register from './Pages/Register.js';
 import Index from './Pages/Index.js';
 import Login from './Pages/Login.js';
-import AnimatedBackground from './components/AnimatedBackground';
 
 function App() {
     return (
         <>
-            <AnimatedBackground />
             <Router>
                 <Routes>
                     <Route path="/" element={<Index />} />

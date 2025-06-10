@@ -42,7 +42,7 @@ function Register() {
     }
 
     try {
-      const response = await fetch('/api/auth/register', {
+      const response = await fetch('https://4908-197-37-156-248.ngrok-free.app/api/auth/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         // Add password_confirmation to the request body

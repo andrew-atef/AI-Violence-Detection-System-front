@@ -1,5 +1,5 @@
 import { FaVideo } from 'react-icons/fa';
-
+import "../cssFolder/AnimatedBackground.css"
 function AnimatedBackground() {
     return (
         <div className="background-wrapper">

@@ -27,8 +27,8 @@ function Index() {
         </div>
       </div>
       <div className="main-content">
-        <h2>Advanced Security Monitoring Solution</h2>
-        <p>Protect your premises with AI-powered surveillance</p>
+      <h2>Advanced Security Monitoring Solution</h2>
+      <p>Protect your premises with AI-powered surveillance</p>
         <div className="features-grid">
           <div className="feature-card">
             <div className="icon-container">

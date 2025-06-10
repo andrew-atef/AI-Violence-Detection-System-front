@@ -1,0 +1,114 @@
+/* Container for cameras table */
+.camera-container {
+    padding: 20px;
+    margin-left: 100px;
+    min-height: 100vh;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.camera-container:hover {
+    margin-left: 0;
+  }
+  body:not(:has(.dashboard-container1:hover)) .camera-container {
+    margin-left: 0;
+  }
+.camera-table-wrapper {
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.camera-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    overflow: hidden;
+    flex: 1;
+}
+
+.camera-table th,
+.camera-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.camera-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.camera-table tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+.camera-table tr:hover {
+    background-color: #f0f8ff;
+}
+
+.camera-table tr.read {
+    background-color: #eeeeee;
+}
+
+.camera-table button {
+    padding: 5px 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.camera-table button:hover {
+    background-color: #45a049;
+}
+
+.camera-action-btn {
+    padding: 6px 12px;
+    margin-right: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.camera-action-btn.accept {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.camera-action-btn.delete {
+    background-color: #f44336;
+    color: white;
+}
+
+.camera-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    margin-top: 30px;
+    gap: 5px;
+}
+
+.camera-pagination button {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.camera-pagination button:hover {
+    background-color: #f1f1f1;
+}
+
+.camera-pagination button.active {
+    background-color: #4CAF50;
+    color: white;
+    border-color: #4CAF50;
+} 

@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import Footer from "../components/Footer";
-import AdminTaskbar from "../components/AdminTaskbar";
+import AnimatedBackground from "../components/AnimatedBackground";
 // Import CSS if you have specific styles for this page
-// import '../cssFolder/ReportDetails.css';
+import '../cssFolder/ReportDetails.css';
 
 function ReportDetails() {
   const { id } = useParams(); // Get id from URL
@@ -24,7 +24,7 @@ function ReportDetails() {
 
     // Fetch the specific report by ID from the API
     // Assuming the endpoint structure is /api/violence-notifications/{id}
-    fetch(`/api/violence-notifications/${id}`, {
+    fetch(`https://4908-197-37-156-248.ngrok-free.app/api/violence-notifications/${id}`, {
         headers: {
             'Authorization': `Bearer ${token}`,
             'Accept': 'application/json',
@@ -71,42 +71,72 @@ function ReportDetails() {
   // --- Render Report Details ---
   return (
     <div>
-      <AdminTaskbar/>
-      {/* Use a container for better styling */}
-      <div style={{ padding: '20px', maxWidth: '800px', margin: 'auto' }}>
-        <h2>Report Details</h2>
-        {/* Display details using correct field names */}
-        <p><strong>Report ID:</strong> {report.id}</p>
-        <p><strong>User ID:</strong> {report.user_id}</p>
-        <p><strong>Timestamp:</strong> {new Date(report.created_at).toLocaleString()}</p>
-        <p><strong>Camera Number:</strong> {report.camera_num}</p>
-        <p><strong>Prediction:</strong> {report.prediction}</p>
-        <p><strong>Confidence:</strong> {report.confidence !== undefined ? report.confidence.toFixed(4) : 'N/A'}</p>
-        <p><strong>Note:</strong> {report.note || 'N/A'}</p>
-
-        {/* Display the video if video_path exists */}
+      <AnimatedBackground/>
+      <div className="cont" style={{
+        padding: '30px',
+        Width: "90%",
+        opacity:"90%",
+        background: 'rgba(255,255,255,0.95)',
+        borderRadius: '18px',
+        boxShadow: '0 4px 24px rgba(0,0,0,0.13)',
+        border: '1px solid #e0e0e0',
+        color: '#222',
+        position: 'relative',
+        height: "100vh"
+      }}>
+        <div style={{display:'flex', alignItems:'center', gap:10, marginBottom: 20 , justifyContent:"center"}}>
+          <span style={{fontSize: 32, color: '#4CAF50'}}>📋</span>
+          <h2 style={{margin:0, color:'#4CAF50', fontWeight:700, fontSize: '2rem'}}>Report Details</h2>
+        </div>
+        <div style={{marginBottom: 18}}>
+          <span style={{color:'#888', fontWeight:600}}>Report ID:</span>
+          <span style={{marginLeft:10, fontWeight:700, color:'#222'}}>{report.id}</span>
+        </div>
+        <div style={{marginBottom: 18}}>
+          <span style={{color:'#888', fontWeight:600}}>User ID:</span>
+          <span style={{marginLeft:10, fontWeight:700, color:'#222'}}>{report.user_id}</span>
+        </div>
+        <div style={{marginBottom: 18}}>
+          <span style={{color:'#888', fontWeight:600}}>Timestamp:</span>
+          <span style={{marginLeft:10, fontWeight:700, color:'#222'}}>{new Date(report.created_at).toLocaleString()}</span>
+        </div>
+        <div style={{marginBottom: 18}}>
+          <span style={{color:'#888', fontWeight:600}}>Camera Number:</span>
+          <span style={{marginLeft:10, fontWeight:700, color:'#222'}}>{report.camera_num}</span>
+        </div>
+        <div style={{marginBottom: 18}}>
+          <span style={{color:'#888', fontWeight:600}}>Prediction:</span>
+          <span style={{marginLeft:10, fontWeight:700, color:'#222'}}>{report.prediction}</span>
+        </div>
+        <div style={{marginBottom: 18}}>
+          <span style={{color:'#888', fontWeight:600}}>Confidence:</span>
+          <span style={{marginLeft:10, fontWeight:700, color:'#222'}}>{report.confidence !== undefined ? report.confidence.toFixed(4) : 'N/A'}</span>
+        </div>
+        <div style={{marginBottom: 18}}>
+          <span style={{color:'#888', fontWeight:600}}>Description:</span>
+          <span style={{marginLeft:10, fontWeight:700, color:'#222'}}>{report.note || 'N/A'}</span>
+        </div>
         {report.video_path ? (
-          <div>
-            <h3>Recorded Video:</h3>
+          <div style={{marginTop: 30}}>
+            <h3 style={{color:'#4CAF50', marginBottom: 10}}>Recorded Video:</h3>
             <video
               src={report.video_path}
-              controls // Add video controls (play, pause, volume)
-              style={{ width: "100%", maxHeight: "500px", backgroundColor: "#000" }} // Style as needed
-              onError={(e) => console.error("Error loading video:", e)} // Optional: handle video load errors
+              controls
+              style={{ width: "100%", maxHeight: "350px", backgroundColor: "#fff", borderRadius: 10, boxShadow: '0 2px 8px rgba(0,0,0,0.08)' }}
+              onError={(e) => console.error("Error loading video:", e)}
             >
               Your browser does not support the video tag.
             </video>
           </div>
         ) : (
-          <p><strong>Video:</strong> No video available for this report.</p>
+          <p style={{color:'#888', marginTop: 30}}><strong>Video:</strong> No video available for this report.</p>
         )}
-
-        <br />
-        <Link to="/admin-dashboard">
-          <button style={{ marginTop: '20px' }}>Back to Reports List</button>
-        </Link>
+        <div style={{textAlign:'center', marginTop: 35}}>
+          <Link to="/admin-dashboard">
+            <button style={{ backgroundColor: "#4CAF50", color: "white", borderRadius: "10px", padding: "15px 40px", height: "50px",  cursor:"pointer", fontWeight:600, fontSize:'1.1rem', border:'none', boxShadow:'0 2px 8px rgba(0,0,0,0.08)' }}>Back to Reports List</button>
+          </Link>
+        </div>
       </div>
-      <Footer />
     </div>
   );
 }

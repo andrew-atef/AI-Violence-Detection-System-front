@@ -1,22 +1,27 @@
 .footer {
     text-align: center;
-
     width: 100%;
-   
-    background-color: #001e3d;
+    background-color: rgb(32 24 52);
     color: white;
- 
-    /* position: relative;
-    height: 100px; */
-    
-   opacity: 0.8;
+    opacity: 0.8;
     margin: 0;
     font-size: larger;
     font-weight: 900;
     color: #ffffff;
-    
+    position: relative;
+    top: 200px;
+    bottom: 0;
+    margin-top: auto; /* Push footer to bottom */
 }
- p{
+
+/* Add this to your main layout container */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+p {
     padding: 40px;
     margin: 0;
 }
