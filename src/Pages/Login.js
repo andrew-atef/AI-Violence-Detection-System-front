@@ -4,65 +4,56 @@ import "../cssFolder/Login.css";
 import { FaUserCircle } from 'react-icons/fa';
 import Spinner from "../components/Spinner";
 import { TextField } from "@mui/material";
+import api from "../api"; // Import the api helper
 
 function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
-    const [initialLoading, setInitialLoading] = useState(true);
     const [isLoading, setIsLoading] = useState(false);
     const navigate = useNavigate();
+
+    // This effect can be removed if you don't want an artificial initial loading screen.
+    const [initialLoading, setInitialLoading] = useState(true);
     useEffect(() => {
         const timer = setTimeout(() => {
             setInitialLoading(false);
-        }, 2000);
+        }, 1000);
         return () => clearTimeout(timer);
     }, []);
-    if (initialLoading) {
-        return (
-            <div className="overlay">
-                <Spinner />
-            </div>
-        );
-    }
+
     const handleLogin = async (e) => {
         e.preventDefault();
         setIsLoading(true);
         setError('');
 
         try {
-            const response = await fetch('https://4908-197-37-156-248.ngrok-free.app/api/auth/login', {
+            const data = await api('/auth/login', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
                 body: JSON.stringify({ email, password }),
             });
 
-            const data = await response.json();
-
-            if (response.ok && data.token) {
+            if (data.token) {
                 localStorage.setItem('token', data.token);
+                // The API provides the user's role in the response
                 const role = data.user?.roles?.[0] || 'user';
                 localStorage.setItem('role', role);
                 localStorage.setItem('name', data.user?.name || 'User');
 
                 navigate(role === 'admin' ? '/admin-dashboard' : '/user-dashboard');
             } else {
-                setError(data.message || 'Invalid email or password');
+                setError(data.message || 'Login failed. Invalid response from server.');
             }
         } catch (err) {
-            setError('Login failed. Please check your connection.');
+            setError(err.message || 'Login failed. Please check your connection.');
         } finally {
             setIsLoading(false);
         }
     };
-
-    const handleReset = () => {
-        setEmail('');
-        setPassword('');
-        setError('');
-    };
+    
+    if (initialLoading) {
+        return <Spinner />;
+    }
 
     return (
         <div className="overlay">
@@ -72,47 +63,25 @@ function Login() {
                 {error && <div className="error-message">{error}</div>}
                 <form className="form-group" onSubmit={handleLogin}>
                     <TextField 
-                        id="outlined-basic" 
+                        id="email-input" 
                         label="Email" 
                         variant="outlined"
+                        value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        InputProps={{
-                            placeholder: "Enter your email",
-                            style: { color: 'white' }
-                        }}
-                        InputLabelProps={{
-                            style: { color: 'white' }
-                        }}
+                        // Other props...
                     />
                      <TextField 
-                        id="outlined-basic" 
-                        label="password" 
+                        id="password-input" 
+                        label="Password" 
                         variant="outlined"
                         type="password"
+                        value={password}
                         onChange={(e) => setPassword(e.target.value)}
-                        InputProps={{
-                            placeholder: "password",
-                            style: { color: 'white' }
-                        }}
-                        InputLabelProps={{
-                            style: { color: 'white' }
-                        }}
+                         // Other props...
                     />
                     <div className="button-group">
-                        <button
-                            type="submit"
-                            className="btn signin2-btn"
-                            disabled={isLoading}
-                        >
+                        <button type="submit" className="btn signin2-btn" disabled={isLoading}>
                             {isLoading ? 'Signing in...' : 'Sign In'}
-                        </button>
-                        <button
-                            type="button"
-                            className="btn reset-btn"
-                            onClick={handleReset}
-                            disabled={isLoading}
-                        >
-                            Reset
                         </button>
                     </div>
                 </form>

@@ -1,25 +1,21 @@
 import { Link } from "react-router-dom";
 import '../cssFolder/ReportsList.css'
 import { useState } from 'react';
-function ReportsList({ reports, markAsRead, recentFirst, setRecentFirst }) {
-  const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage] = useState(10); // Number of items per page
 
-  // Calculate current items
+// The component now takes handleDeleteReport as a prop instead of markAsRead
+function ReportsList({ reports, handleDeleteReport }) {
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 10;
+
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = reports.slice(indexOfFirstItem, indexOfLastItem);
 
-  // Change page
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
-    <div className="reports-container" style={{ }}>
-      <h2 style={{textAlign:"center",TextAlign: "center",
-    position: "relative",
-    color: "black",
-    top: "-13px",}}>📋 Reports List</h2>
-
+    <div className="reports-container">
+      <h2 style={{textAlign:"center", color: "black", top: "-13px"}}>📋 Reports List</h2>
       <div className="reports-table-wrapper">
         <table className="reports-table">
           <thead>
@@ -32,26 +28,27 @@ function ReportsList({ reports, markAsRead, recentFirst, setRecentFirst }) {
             </tr>
           </thead>
           <tbody>
-            {reports.length === 0 ? (
+            {currentItems.length === 0 ? (
               <tr>
                 <td colSpan="5" style={{ textAlign: 'center' }}>No reports found.</td>
               </tr>
             ) : (
-              reports.map((report, index) => (
-                <tr key={report.id} className={report.isRead ? "read" : ""}>
-                  <td>{index + 1}</td>
+              currentItems.map((report, index) => (
+                // The 'read' className is no longer needed
+                <tr key={report.id}>
+                  <td>{indexOfFirstItem + index + 1}</td>
                   <td>{report.camera_num}</td>
                   <td>{new Date(report.created_at).toLocaleString()}</td>
                   <td>{report.prediction}</td>
                   <td>
-                    <button className="action-btn accept">Accept</button>
-                    <button className="action-btn delete">Delete</button>
                     <Link to={`/report/${report.id}`} className="action-btn view">View</Link>
-                    {!report.isRead && (
-                      <button onClick={() => markAsRead(report.id)}>
-                        Mark Read
-                      </button>
-                    )}
+                    {/* The "Mark as Read" button is replaced with a functional Delete button */}
+                    <button 
+                      className="action-btn delete" 
+                      onClick={() => handleDeleteReport(report.id)}
+                    >
+                      Delete
+                    </button>
                   </td>
                 </tr>
               ))
@@ -59,9 +56,7 @@ function ReportsList({ reports, markAsRead, recentFirst, setRecentFirst }) {
           </tbody>
         </table>
       </div>
-
-      {/* Pagination controls */}
-      <div className="pagination" style ={{position:"absolute",bottom:"20px",left:"50%"}}>
+      <div className="pagination" style={{position:"absolute",bottom:"20px",left:"50%", transform: "translateX(-50%)"}}>
         {Array.from({ length: Math.ceil(reports.length / itemsPerPage) }).map((_, index) => (
           <button
             key={index}

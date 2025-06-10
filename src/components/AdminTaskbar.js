@@ -3,15 +3,15 @@ import propTypes from "prop-types";
 import logo from '../assets/8334315.png';
 import '../cssFolder/adminTaskbar.css';
 import { useNavigate } from 'react-router-dom';
-import { FaChartBar, FaUsers, FaVideo, FaSignOutAlt } from 'react-icons/fa';
+import { FaChartBar, FaUsers, FaVideo } from 'react-icons/fa';
 
-function AdminTaskbar({ unreadCount, onItemSelect }) {
+function AdminTaskbar({ onItemSelect }) {
   const navigate = useNavigate();
-  const [activeItem, setActiveItem] = useState(null);
+  const [activeItem, setActiveItem] = useState('reports');
 
   const handleItemClick = (item) => {
     setActiveItem(item);
-    onItemSelect(item); // Pass the active item to parent
+    onItemSelect(item);
   };
 
   return (
@@ -31,7 +31,7 @@ function AdminTaskbar({ unreadCount, onItemSelect }) {
 
         <div 
           className={`admin-sidebar-item ${activeItem === 'users' ? 'active' : ''}`}
-          onClick={() => handleItemClick('users')}  // Changed to use handleItemClick
+          onClick={() => handleItemClick('users')}
         >
           <FaUsers className="admin-sidebar-icon" />
           <span className="admin-sidebar-text">Users</span>
@@ -39,45 +39,40 @@ function AdminTaskbar({ unreadCount, onItemSelect }) {
 
         <div 
           className={`admin-sidebar-item ${activeItem === 'cameras' ? 'active' : ''}`}
-          onClick={() => handleItemClick('cameras')}  // Changed to use handleItemClick
+          onClick={() => handleItemClick('cameras')}
         >
           <FaVideo className="admin-sidebar-icon" />
           <span className="admin-sidebar-text">Cameras</span>
         </div>
       </nav>
+      
+      {/* Notification bell has been removed as per the requirement change */}
 
-      <div className="admin-notification-bell">
-        <span className="admin-bell">🔔</span>
-        {unreadCount > 0 && (
-          <span className="admin-notification-badge">{unreadCount}</span>
-        )}
-      </div>
-    
-    <div className="admin-sidebar-footer">
-      <div className="admin-profile-container">
-        <div 
-          className="admin-sidebar-logout"
-          onClick={() => {
-            localStorage.removeItem('token');
-            localStorage.removeItem('role');
-            navigate('/');
-          }}
-        >
-          Logout
+      <div className="admin-sidebar-footer">
+        <div className="admin-profile-container">
+          <div 
+            className="admin-sidebar-logout"
+            onClick={() => {
+              localStorage.clear(); // Clear all local storage for a clean logout
+              navigate('/');
+            }}
+          >
+            Logout
+          </div>
+          <img 
+            src={logo} 
+            alt="Admin Profile" 
+            className="admin-profile-picture" 
+          />
         </div>
-        <img 
-          src={logo} 
-          alt="Admin Profile" 
-          className="admin-profile-picture" 
-        />
       </div>
     </div>
-  </div>
-);
+  );
 }
 
+// Updated propTypes to remove unreadCount
 AdminTaskbar.propTypes = {
-  unreadCount: propTypes.number.isRequired,
+  onItemSelect: propTypes.func.isRequired,
 };
 
 export default AdminTaskbar;
